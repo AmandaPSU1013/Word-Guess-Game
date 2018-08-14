@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Psychic Guess</h1>
+    <h2>wrong guess</h2>
+    <h2>Wins</h2>
+    <h2>Losses</h2>
+<script>
+
+
+var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+
+var wins = 0;
+var losses = 0;
+var guessesLeft = 8;
+var lettersGuessed = [];
+var computerGuess = [];
+
+
+letterGuess = function() {
+	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	computerGuess.push(compGuess);
+	console.log(computerGuess[0]);
+}
+
+
+document.onkeyup = function(event) {
+	var playerGuess = event.key;
+	lettersGuessed.push(playerGuess);
+	console.log(computerGuess[0]);
+
+if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
+	wins++;
+	guessesLeft = 8;
+	lettersGuessed.length = 0;
+	computerGuess.length = 0;
+	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	computerGuess.push(compGuess);
+	console.log(computerGuess[0]);
+}
+
+if ((playerGuess !== computerGuess[0]) && (guessesLeft > 0)) {
+	guessesLeft = guessesLeft-1;
+}
+
+else {
+	losses++;
+	guessesLeft = 8;
+	lettersGuessed.length = 0;
+	computerGuess.length = 0;
+	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	computerGuess.push(compGuess);
+    console.log(computerGuess[0]);
+}
+
+
+
+
+
+    
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -3,9 +3,9 @@ console.log("file linked")
 function newGame() {
 
     gameRunning = true;
-    counter = 12;
+    guessesLeft = 12;
     userGuess = [];
-    incorrectLetterBank = [];
+    wrongLetter = [];
     chosenWords = [];
 }
 
@@ -38,24 +38,15 @@ for (var i; i < chosenWords.length; i++) {
 
 
 document.onkeyup = function (event) {
-    userGuess = event.key;
-    if (chosenWords.indexOf(userGuess > -1) {
+        userGuess = event.key;
+        if (chosenWords.indexOf(userGuess > -1) {
 
-    }
-        for(var i =0;i < chosenWords.length;i++){
+            }
+            for (var i = 0; i < chosenWords.length; i++) {
 
+            } else {
+                wrongLetter.push(userGuess);
+                guessesLeft--;
+                console.log(wrongLetter)
+            }
         }
-    }
-
-    
-    else {
-            wrongLetter.push(userGuess);
-            guessesLeft--;
-            console.log(wrongLetter)
-        }
-    }
-
-
-
-
-
