@@ -16,23 +16,62 @@
 
 <body>
 
-    <header>Penn State Football Hangman!!!</header>
+
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <div class="page-header">
-                    <div id="PSU">
-                        <h1>Solve This Hangman</h1>
+            <h1 class="page-header">
+                <h1>Penn State Football Hangman!</h1>
+        </div>
+
+        <div class="row" id="mainGameSpace">
+            <div class="col-md-6 text-center">
+                <strong>
+                    <h1 id="userGameSpace"></h1>
+                </strong>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <h2>Letters Already Guessed: &nbsp;
+                    <span id="usedLettersWrong">
+                </h2>
+            </div>
+        </div>
+
+       
+        <div class="col-md-6 text-center">
+                <h2>Guesses Left: &nbsp;
+                    <span id="usedLettersWrong">
+                </h2>
+            </div>
+        </div>
+
+          <div class="container ">
+                <div class="row ">
+                    <div class="col-md-8">
+                        <div class="page-header ">
+                            <div id="PSU ">
+                                <h2>Press Anywhere to start this game!</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="PSU.jpg" alt="psu">
-            </div>
-        </div>
-    </div>
+                <div class="row ">
+                        <div class="col-md-3 "></div>
+                        <div class="col-md-3 ">
+                            <p>wins:</p>
+                            <p id="wins ">0</p>
+                        </div>
+                        <div class="col-md-3 ">
+                            <p>losses:</p>
+                            <p id="losses ">0</p>
+                        </div>
+                        <div class="col-md-3 "></div>
+                    </div>
+                <div class="row ">
+                    <div class="col-md-4 ">
+                        <img src="PSU.jpg " alt="psu ">
+                    </div>
+                </div>
 </body>
 
 </html>

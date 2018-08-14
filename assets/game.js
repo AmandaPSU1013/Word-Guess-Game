@@ -1,53 +1,61 @@
 console.log("file linked")
+
 function newGame() {
 
     gameRunning = true;
     counter = 12;
     userGuess = [];
-    incorrectLetterBank =[];
-    chosenWords =[];
+    incorrectLetterBank = [];
+    chosenWords = [];
 }
 
 
 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-var computerWords = ["Paterno", "Mcsorley", "Franklin", "Sanders"];
+var wordBank = ["Paterno", "Mcsorley", "Franklin", "Sanders"];
 var chosenWords = 3;
 var userGuess = (alphabet);
 var letterGuess = [];
-var incorrectLetterBank =[];
-var wins = "";
-var loses = "";
+var wrongLetter = [];
+var guessesLeft = 12;
+var wins = 0;
+var loses = 0;
 var gameRunning = true
 var lives = 4;
-var counter = 12;
 
-var chosenWords = computerWords[Math.floor(Math.random() * computerWords.length)];
+var chosenWords = wordBank[Math.floor(Math.random() * wordBank.length)];
 console.log("chosenWords", chosenWords);
 
-for ( var i =0; i < chosenWords.length; i++){
+
+
+
+var placeholder = "";
+for (var i; i < chosenWords.length; i++) {
+    placeholder += "-"
+    console.log("----")
 }
 
-function letterGuess(letter) {
-    console.log( letterGuess);
-}
 
+document.onkeyup = function (event) {
+    userGuess = event.key;
+    if (chosenWords.indexOf(userGuess > -1) {
 
-for (var i = 0; i < chosenWords.length; i ++){
-    If (chosenWords[i].toLowerCase() == letterGuess.toLowerCase()) {
-        
+    }
+        for(var i =0;i < chosenWords.length;i++){
+
+        }
     }
 
     
-
-    
-
-    
-
-    
-
-
+    else {
+            wrongLetter.push(userGuess);
+            guessesLeft--;
+            console.log(wrongLetter)
+        }
+    }
 
 
-    
+
+
+
